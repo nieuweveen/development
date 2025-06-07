@@ -1,61 +1,131 @@
 name: Voertuig bug
-description: Bug report gerelateerd aan voertuigen
-title: "[FEATURE]: "
-labels: ["voertuigen", "new"]
+description: Bug report gerelateerd aan voertuigen in Nieuweveen Roleplay
+title: "[BUG-VOERTUIG]: "
+labels: ["voertuigen", "bug", "new"]
 body:
   - type: markdown
     attributes:
       value: |
-        Bedankt dat je de tijd wilt nemen om een issue aan te maken!
-        Vul de onderstaande dingen aub zo gedetailleerd mogelijk in zodat we de issue snel kunnen afhandelen.
+        🚗 **Voertuig Bug Report - Nieuweveen Roleplay**
+        
+        Bedankt dat je de tijd wilt nemen om een voertuig bug te rapporteren!
+        Vul de onderstaande velden aub zo gedetailleerd mogelijk in zodat ons development team de bug snel kan reproduceren en oplossen.
+        
+        **Tips voor een goede bug report:**
+        - Voeg screenshots of video's toe wanneer mogelijk
+        - Beschrijf exact wat er gebeurde en wanneer
+        - Vermeld of de bug reproduceerbaar is
+        
+        Voor opmaak hulp zie [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   - type: input
     id: contact
     attributes:
       label: Contact Details
-      description: Hoe kunnen we je contacteren op Discord als we extra informatie nodig zijn?
-      placeholder: "Voorbeeld: Misstake#1337"
+      description: Hoe kunnen we je contacteren op Discord als we extra informatie nodig hebben?
+      placeholder: "Voorbeeld: AutoMonteur_Jan#1337"
     validations:
       required: false
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Type Bug
+      description: Wat voor soort voertuig bug is dit?
+      options:
+        - Handling/Besturing
+        - Performance/Prestaties
+        - Visual/Uiterlijk
+        - Audio/Geluid
+        - Spawning Issues
+        - Tuning/Modificaties
+        - Damage System
+        - Physics/Fysica
+        - Fuel System
+        - Anders
+    validations:
+      required: true
   - type: input
     id: plate
     attributes:
       label: "Kenteken van voertuig"
-      description: "Alleen als dit gaat om een specifiek voertuig"
+      description: "Alleen invullen als dit gaat om een specifiek voertuig in je bezit"
+      placeholder: "Voorbeeld: ABC-123"
     validations:
       required: false
   - type: input
     id: model
     attributes:
       label: "Voertuig model"
-      description: "Spawnnaam van voertuig, of exacte naam in dealer"
+      description: "Spawnnaam van voertuig, of exacte naam zoals deze in de dealer staat"
+      placeholder: "Voorbeeld: adder, Pfister 811, ambulance"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Ernst van de Bug
+      description: Hoe ernstig is deze bug?
+      options:
+        - Laag - Kleine visuele bug
+        - Gemiddeld - Bug die gameplay beïnvloedt
+        - Hoog - Bug die roleplay verstoort
+        - Kritiek - Server crash of game-breaking
     validations:
       required: true
   - type: textarea
     id: bug-description
     attributes:
       label: "Omschrijf de bug"
-      description: "Wat ging er mis, eventueel met videobewijs, screenshots oid"
+      description: "Wat ging er precies mis? Beschrijf zo gedetailleerd mogelijk wat er gebeurde."
+      placeholder: |
+        Bijvoorbeeld:
+        ## Wat er gebeurde
+        Toen ik probeerde mijn auto te tunen bij LS Customs...
+        
+        ## Screenshots/Video
+        [Voeg hier links toe naar screenshots of video's]
     validations:
       required: true
   - type: textarea
     id: repro
     attributes:
-      label: "Repro"
-      description: "Welke exacte stappen moeten wij volgen om deze bug zelf na te kunnen maken"
+      label: "Reproductie Stappen"
+      description: "Welke exacte stappen moeten wij volgen om deze bug zelf na te kunnen maken?"
+      placeholder: |
+        1. Ga naar LS Customs
+        2. Selecteer [voertuig]
+        3. Klik op [optie]
+        4. Bug treedt op
     validations:
-      required: false
+      required: true
   - type: textarea
     id: normal-behavior
     attributes:
-      label: "Normaal gedrag"
-      description: "Wat hoorde er te gebeuren?"
+      label: "Verwacht Gedrag"
+      description: "Wat hoorde er normaal gesproken te gebeuren?"
+      placeholder: "Het voertuig hoorde normaal te spawnen zonder visuele bugs..."
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Extra Informatie"
+      description: "Eventuele extra context, wanneer de bug optrad, hoe vaak het gebeurt, etc."
+      placeholder: |
+        - Tijdstip: 20:30 Nederlandse tijd
+        - Frequentie: Gebeurt elke keer
+        - Server load: Druk (80+ spelers)
+        - Andere relevante informatie...
     validations:
       required: false
   - type: checkboxes
     id: richtlijnen
     attributes:
       label: Richtlijnen
-      description: Door deze issue aan te maken ga je akkoord met onze [contributing](https://github.com/Tedeapolis/development/blob/master/CONTRIBUTING.md) richtlijnen
+      description: Door deze bug report aan te maken ga je akkoord met onze [contributing](https://github.com/Nieuweveen-Roleplay/development/blob/master/CONTRIBUTING.md) richtlijnen
       options:
-        - label: Ik ga akkoord met de issue richtlijnen en heb deze aandachtig gelezen
+        - label: Ik ga akkoord met de bug report richtlijnen en heb deze aandachtig gelezen
+          required: true
+        - label: Ik heb gecontroleerd of deze bug niet al eerder is gerapporteerd
+          required: true
+        - label: Ik heb geprobeerd de bug te reproduceren voordat ik deze report maakte
           required: true

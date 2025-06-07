@@ -1,48 +1,54 @@
-name: Feature request
-description: Vraag een nieuwe feature aan
-title: "[FEATURE]: "
+name: Feature Request
+description: Stel een nieuwe functie of toevoeging voor
+title: "[FEATURE] "
 labels: ["enhancement", "new"]
 body:
   - type: markdown
     attributes:
       value: |
-        Bedankt dat je de tijd wilt nemen om een issue aan te maken!
-        Vul de onderstaande dingen aub zo gedetailleerd mogelijk in zodat we de issue snel kunnen afhandelen.
-        
-        **Wanneer je langere teksten maakt vergeet dan niet gebruik te maken van OPMAAK! (headings/kopjes per onderwerp etc)**
-        Dit zorgt ervoor dat het overzichtelijk blijft en we je issue waarschijnlijk sneller op zullen pakken
-        
-        Voor opmaak hulp zie [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) (Dit is sws handig om te weten want werkt ook volledig in Discord berichten)
+        Bedankt dat je een suggestie wilt doen voor Nieuweveen Roleplay!
+
+        Vul onderstaand formulier zo volledig mogelijk in, zodat we je verzoek goed kunnen beoordelen.  
+        📌 **Gebruik duidelijke kopjes (headings)** als je een langere uitleg hebt. Dit houdt het overzichtelijk.
+
+        Handige link: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) (ook handig voor Discord!)
+
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: Hoe kunnen we je contacteren op Discord als we extra informatie nodig zijn?
-      placeholder: "Voorbeeld: Misstake#1337"
+      label: Contactgegevens
+      description: Hoe kunnen we je bereiken via Discord als we vragen hebben?
+      placeholder: bijv. Skai#0001
     validations:
       required: false
+
   - type: input
     id: goedkeuring
     attributes:
       label: Goedgekeurd door
-      description: Is deze issue door iemand goedgekeurd? Zo ja, vul dan hier de persoon z'n Discord tag in.
+      description: Is deze feature door iemand goedgekeurd? Zo ja, vul hier de Discord-tag van die persoon in.
       value: "N.V.T."
+
   - type: textarea
     id: feature-description
     attributes:
-      label: "Beschrijf zo duidelijk mogelijk de feature"
+      label: Beschrijving van de feature
+      description: Beschrijf zo duidelijk mogelijk wat je graag toegevoegd zou willen zien
+      placeholder: Bijvoorbeeld: "Voeg een lockpick systeem toe voor civiele inbraken"
     validations:
       required: true
+
   - type: textarea
     id: solves
     attributes:
-      label: "Wat lost deze feature op?"
-    validations:
-      required: false
+      label: Wat lost deze feature op?
+      description: Leg uit waarom deze feature handig is of welk probleem het oplost
+      placeholder: Bijvoorbeeld: "Er is op dit moment geen leuke manier voor civielen om crimineel geld te verdienen"
+
   - type: checkboxes
     attributes:
-      label: Richtlijnen
-      description: Door deze issue aan te maken ga je akkoord met onze [contributing](https://github.com/Tedeapolis/development/blob/master/CONTRIBUTING.md) richtlijnen
+      label: Bevestiging
+      description: Door deze feature aan te vragen, ga je akkoord met onze [contributing-richtlijnen](https://github.com/Tedeapolis/development/blob/master/CONTRIBUTING.md).
       options:
-        - label: Ik ga akkoord met de issue richtlijnen en heb deze aandachtig gelezen
+        - label: Ik heb de richtlijnen gelezen en ga ermee akkoord
           required: true

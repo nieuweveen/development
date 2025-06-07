@@ -48,7 +48,7 @@ body:
     id: richtlijnen
     attributes:
       label: Bevestiging
-      description: Door deze issue in te dienen, ga je akkoord met de [contributing-richtlijnen](https://github.com/Tedeapolis/development/blob/master/CONTRIBUTING.md).
+      description: Door deze issue in te dienen, ga je akkoord met de [contributing-richtlijnen](https://github.com/nieuweveen/development/blob/master/CONTRIBUTING.md).
       options:
         - label: Ik heb de richtlijnen gelezen en ga ermee akkoord
           required: true
